@@ -163,6 +163,12 @@ public class Chevy{
             return false;
         }
     }
+
+    //toString Method
+    public String toString(){
+        String output =  "**************************************************\n";
+        output += this.year + " ";
+    }
 }
 
 
