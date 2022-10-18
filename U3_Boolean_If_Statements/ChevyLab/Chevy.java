@@ -170,7 +170,7 @@ public class Chevy{
         output += this.year + " Chevrolet " + this.model + " (" + this.color + ") \n";
         output += "BASE PRICE:\t\t\t\t\t\t" + this.basePrice;
         output += "\nMILES:\t\t\t\t\t\t\t" + this.miles;
-        output += "\nFUEL EFFICIENCY:\t\t\t\t" + this.mpg " mpg\n";
+        output += "\nFUEL EFFICIENCY:\t\t\t\t" + this.mpg + " mpg\n";
         output += "PACKAGES";
         return output;
     }
