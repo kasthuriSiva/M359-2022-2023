@@ -2,37 +2,52 @@ package U4_Loops.PigLatinLab;
 
 public class PigLatin {
 
-   public static String translateWordToPigLatin(String str){
-       return toPigLatin(str);
-   }
+    public static String toPigLatin(String phrase){
+        findWord(phrase);
+        return phrase;
+    }
 
-   public static String convertOneWord(String str){
-       String strNew = "";
-       if(str.substring(0,1).equalsIgnoreCase("a")||str.substring(0,1).equalsIgnoreCase("e")||
-               str.substring(0,1).equalsIgnoreCase("i")||str.substring(0,1).equalsIgnoreCase("o")||str.substring(0,1).equalsIgnoreCase("u")){
+    public static String findWord(String phrase){
+       boolean isDone = false;
+       int loc = -1;
+       String output = "";
 
-           strNew += str.substring(1) + str.substring(0,1) + "ay";
-           return strNew;
+        while (isDone==false){
+            loc = phrase.indexOf(" ");
 
-       }
-       else if (str.substring(0,1).equalsIgnoreCase("y")){
-           strNew += str.substring(1) + "yay";
-           return strNew;
-       }
-       else{
-           strNew += str.substring(1) + str.substring(0,1) + "yay";
-           return strNew;
-       }
-   }
+            if(loc !=-1){
+                //if we find space join the part before " " with the part after " "
+                output+= phrase.substring(0,loc);
+                temp = translateWordToPigLatin(output);
 
-   public static String toPigLatin(String phrase){
-        String output ="";
-       for(int i=0; i<phrase.length(); i++){
-            if(phrase.charAt(i)==' '){
-                output += convertOneWord(phrase) + " ";
             }
-       }
+            else{
+                //Means no more " " found
+                isDone = true;
+            }
+
+        }
         return output;
     }
 
+    public static String translateWordToPigLatin(String str){
+        String strNew = "";
+
+        if(str.substring(0,1).equalsIgnoreCase("a")||str.substring(0,1).equalsIgnoreCase("e")||
+                str.substring(0,1).equalsIgnoreCase("i")||str.substring(0,1).equalsIgnoreCase("o")||
+                str.substring(0,1).equalsIgnoreCase("u")){
+
+            strNew += str.substring(1) + str.substring(0,1) + "ay";
+            return strNew;
+
+        }
+        else if (str.substring(0,1).equalsIgnoreCase("y")){
+            strNew += str.substring(1) + "yay";
+            return strNew;
+        }
+        else{
+            strNew += str.substring(1) + str.substring(0,1) + "yay";
+            return strNew;
+        }
+    }
 }
