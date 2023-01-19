@@ -168,7 +168,12 @@ public class Notes_7_4_AlgorithmsArrayList {
      * @param list
      */
     public static void shiftLeft(ArrayList<String> list) {
-        list.add(list.size()-1,list.get(0));
+        list.add(list.remove(0));
+
+        /* Another Method:
+        String temp = list.get(0);
+        list.remove(0);
+        list.add(temp);*/
 
     }
 }
