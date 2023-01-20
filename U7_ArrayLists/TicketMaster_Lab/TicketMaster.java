@@ -38,13 +38,11 @@ public class TicketMaster {
             String artist = str.substring(1, loc);
             String city = str.substring(loc+2);
 
-
             /*
             String[] split = scanFile.nextLine().split(",");
             String artist = split[0];
             String city = split[1];
             */
-
 
             Show temp = new Show(date,price,qty,artist,city);
             showInfo.add(temp);
@@ -58,8 +56,6 @@ public class TicketMaster {
             add 3 tabs
             }
 */
-
-
             //+ "\t\t" + city);
         }
         scanFile.close();
