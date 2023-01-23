@@ -55,9 +55,7 @@ public class Show {
 
     public String toString(){
         String output ="";
-        output += "Date        Price      Qty    Performer     City\n";
-        output += "---------------------------------------------------------\n";
-        output+= date + "    " + price + "     " + numberOfTickets + "     " + performer + "       " + city;
+        output += date + "\t\t" + price + "\t\t" + numberOfTickets + "\t\t" + performer + "\t\t" + city;
         return output;
 
     }

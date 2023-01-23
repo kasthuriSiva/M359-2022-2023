@@ -16,7 +16,6 @@ public class Item {
      *  The quantity doesn't matter
      */
     public boolean equals(Item other) {
-        return true;
         if(this.name.equals(other.name) && this.cost == other.cost){
             return true;
         }
@@ -32,7 +31,7 @@ public class Item {
      */
     public String toString() {
         String output = "";
-        output+= "Item name: " + name + ", " + cost + ", "+quantity;
+        output+= "Item name: " + this.name + ",$" + this.cost + ", "+ this.quantity;
         return output;
     }
 
