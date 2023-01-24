@@ -55,7 +55,7 @@ public class Show {
 
     public String toString(){
         String output ="";
-        output += date + "\t\t" + price + "\t\t" + numberOfTickets + "\t\t" + performer + "\t\t" + city;
+        output += date + "\t" + price + "\t\t" + numberOfTickets + "\t\t\t" + performer + "\t\t" + city;
         return output;
 
     }

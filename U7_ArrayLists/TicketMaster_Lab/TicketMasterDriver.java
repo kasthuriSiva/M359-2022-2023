@@ -7,14 +7,25 @@ import java.util.Scanner;
 
 public class TicketMasterDriver {
     public static void main(String[] args) throws FileNotFoundException{
-        //Show S1 = new Show("02-14-22",124.75, 52,"Beyonce", "Chicago");
-        //System.out.println(S1);
+        //Intro Statements
+        System.out.println("Welcome to Ticket Master!\n");
+        System.out.println("Here are our available shows for this year!\n");
+        System.out.println("Date:\t\tPrice\t\tQuantity\tArtist\t\t\tCity");
+        System.out.println("-----------------------------------------------------------------");
 
+        //Create myStore
         TicketMaster myStore = new TicketMaster();
 
+        //Call on the readFromFile function in ticketMaster
         myStore.readFromFile();
 
+        //Print myStore
         System.out.println(myStore);
+
+        boolean isTrue = false;
+        while(isTrue = false){
+
+        }
 
 
     }

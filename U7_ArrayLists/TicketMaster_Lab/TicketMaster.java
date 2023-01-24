@@ -10,17 +10,12 @@ import java.util.Scanner;
 public class TicketMaster {
     private ArrayList<Show> shows;
 
-    private String filePath;
     //Empty Constructor
 
-    public TicketMaster(String filePath) {
-        this.shows = new ArrayList<Show>();
-        this.filePath = filePath;
-    }
-
     public TicketMaster(){
-
+        this.shows = new ArrayList<Show>();
     }
+
     /*public String toString(){
         String output ="";
         for(Show i : shows){
@@ -34,7 +29,12 @@ public class TicketMaster {
         Scanner scanFile = new Scanner(myFile);
         scanFile.useDelimiter(" ");
 
-        ArrayList<Show> shows = new ArrayList<Show>();
+        boolean isTrue = false;
+        while(isTrue = false){
+
+        }
+
+        //ArrayList<Show> shows = new ArrayList<Show>();
         while (scanFile.hasNext())
         {
             //Scans the text file
@@ -67,7 +67,6 @@ public class TicketMaster {
 
         }
         //scanFile.close();
-
     }
     public String toString(){
         String output ="";
