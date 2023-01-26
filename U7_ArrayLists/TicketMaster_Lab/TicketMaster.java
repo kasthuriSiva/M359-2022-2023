@@ -52,9 +52,11 @@ public class TicketMaster {
             Show temp = new Show(date,price,qty,artist,city);
             shows.add(temp);
 
-            if(scanFile.hasNextLine()){
+            /*if(scanFile.hasNextLine()){
                 scanFile.nextLine();
              }
+
+             */
 
             /*
             if (artist is long){
@@ -68,11 +70,45 @@ public class TicketMaster {
         }
         //scanFile.close();
     }
-    public String toString(){
-        String output ="";
-        for(Show i : shows){
+    public String toString() {
+        String output = "";
+        for (Show i : shows) {
             output += i.toString() + "\n";
         }
         return output;
+    }
+    public static void sortByPerformer(ArrayList<Integer> list){
+        for(int i=0; i < list.size()-1; i++){
+
+            //Look for the smallest remaining
+            int minIndex = i;
+            for(int j=i+1; j < list.size(); j++){
+                if(list.get(j) < list.get(minIndex)){
+                    minIndex = j;
+                }
+            }
+
+            //Swap the values at index i and index minIndex
+            Integer temp = list.get(i);
+            list.set(i, list.get(minIndex));
+            list.set(minIndex, temp);
+        }
+    }
+    public static void sortByPrice(ArrayList<Integer> list){
+        for(int i=0; i < list.size()-1; i++){
+
+            //Look for the smallest remaining
+            int minIndex = i;
+            for(int j=i+1; j < list.size(); j++){
+                if(list.get(j) < list.get(minIndex)){
+                    minIndex = j;
+                }
+            }
+
+            //Swap the values at index i and index minIndex
+            Integer temp = list.get(i);
+            list.set(i, list.get(minIndex));
+            list.set(minIndex, temp);
+        }
     }
 }
