@@ -1,8 +1,12 @@
 package U7_ArrayLists.TicketMaster_Lab;
 
+import U2_Objects.StringExample;
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TicketMasterDriver {
@@ -38,15 +42,28 @@ public class TicketMasterDriver {
         int answer = input.nextInt();
         input.nextLine(); //Dummy read for \n
 
+        if(answer == 1||answer == 2||answer == 3||answer == 4||answer == 5||answer == 6){
+            isDone = true;
+        }
 
-        while(!isDone){
-            //based off of user's answer returns the corresponding available shows 
-            if(answer == 1||answer == 2||answer == 3||answer == 4||answer == 5||answer == 6){
-                isDone = true;
+        if (answer<1 || answer >6) {
+            try {
+                int x = 5/0;
+                System.out.println(x);
             }
-            else{
-                isDone = false;
+            catch (Exception e){
+                System.out.println("You typed in a letter. Please type in an Integer.");
             }
+            //FIND THE OTHER CATCH EXCEPTIONS
+
+        }
+
+
+        while(isDone){
+            //based off of user's answer returns the corresponding available shows
+
+            isDone= false;
+            System.out.println("You got into the while loop");
 
         }
 

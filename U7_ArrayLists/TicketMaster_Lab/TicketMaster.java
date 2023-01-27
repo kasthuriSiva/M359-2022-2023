@@ -77,19 +77,19 @@ public class TicketMaster {
         }
         return output;
     }
-    public static void sortByPerformer(ArrayList<Integer> list){
+    public static void sortByPerformer(ArrayList<String> list){
         for(int i=0; i < list.size()-1; i++){
 
             //Look for the smallest remaining
             int minIndex = i;
             for(int j=i+1; j < list.size(); j++){
-                if(list.get(j) < list.get(minIndex)){
+                if(list.get(j) (list.get(minIndex))){
                     minIndex = j;
                 }
             }
 
             //Swap the values at index i and index minIndex
-            Integer temp = list.get(i);
+            String temp = list.get(i);
             list.set(i, list.get(minIndex));
             list.set(minIndex, temp);
         }
