@@ -10,10 +10,31 @@ public class Rectangle extends Shape
         width = 0;
         length = 0;
     }
-    public Rectangle(String color, int numSides, int w, int l)
+    public Rectangle(String color, int numSides, int width, int length)
     {
         super(color,numSides);
-        this.width = w;
-        this.length = l;
+        this.width = width;
+        this.length = length;
+    }
+    public int getWidth()
+    {
+        return this.width;
+    }
+
+    public String toString() {
+        String output = "";
+        output += super.toString();  //Get the color and numSides
+        output += ", Width: " + this.width + ", Length: " + this.length;
+        output += ", Area: " + findArea();
+        return output;
+    }
+    public void scaleSize(double factor)
+    {
+        this.width *= factor;
+        this.length *= factor;
+    }
+    public double findArea()
+    {
+        return this.width * this.length;
     }
 }

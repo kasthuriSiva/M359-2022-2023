@@ -16,12 +16,19 @@ public class Shape
         this.color = color;
         this.numSides = numSides;
     }
-
-    public static void main(String[] args) {
-        public String toString(String color, int numSides)
-        {
-            System.out.println("This shape is " + color + " and has " + numSides + " sides");
-        }
+    public String getColor()
+    {
+        return this.color;
     }
-
+    public int getNumSides()
+    {
+        return this.numSides;
+    }
+    public String toString()
+    {
+        String output = "";
+        output += "Color: " + this.color;
+        output += ", Number of sides: " + this.numSides;
+        return output;
+    }
 }
